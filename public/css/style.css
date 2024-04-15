@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+        
+        body{
+            min-height: 100vh;
+            background: url('bg.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: white;
+
+        }
+
+        .form-text{
+          color: white;
+        }
+
+        .header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo{
+            font-size: 32px;;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+
+        }
+
+        .navbar a{
+            position: relative;
+            font-size: 18px;
+            color: #fff;
+            font-weight: 500;
+            text-decoration: none;
+            margin-left: 40px;
+            
+        }
+
+        .navbar a::before{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            transition: .3s;
+
+        }
+
+        .navbar a:hover::before{
+            width: 100%;
+
+        }
+
+        .navbar a:hover {
+          color: rgb(255, 217, 0);
+        }
+
+        .navbar a :active{
+          color: rgb(255, 217, 0);
+        }
+        
+
+        
+            .category{
+              position: absolute;
+              top: 100%;
+              left: 0;
+              right: 0px;
+              width: 100%;
+              
+              padding: 5px 125px;
+              
+              display: flex;
+              justify-content: right;
+              
+            }
+       
+
+        /* searchbar css */
+        
+
+.search_box {
+  padding-top : 100px;
+}
+
+.search {
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+  margin : auto;
+  width : 250px;
+  height: 54px;
+  background-color : white;
+  border-radius: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+  -webkit-box-shadow: 0px 10px 38px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 10px 38px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 10px 38px 0px rgba(0,0,0,0.1);
+}
+
+.select_area {
+  color : #000000;
+  display : flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif; line-height:24px;
+  font-weight : medium ;
+}
+
+.text {
+  padding-left:15px;
+}
+
+.search_text {
+  width: 70%;
+  border: none;
+  margin-left : 15px;
+  font-size : 16px;
+  font-family: 'Poppins', sans-serif; line-height:24px;
+  font-weight : Regular ;
+  place
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+}
+
+
+.text_and-icon {
+    width: 310px;
+    display: flex;
+    align-items: center;
+  }
+  .search_icon {
+    color : #000000;
+      transition: all .6s ease-in-out;
+      -webkit-transition: all .6s ease-in-out; /** Chrome & Safari **/
+      -moz-transition: all .6s ease-in-out; /** Firefox **/
+      -o-transition: all .6s ease-in-out; /** Opera **/
+  }
+  
+  .search_text:focus {
+    outline: none !important;
+  }
+  
+  .search_text:focus + .search_icon{
+    color : #ffffff;
+    transform: translate(35px,0);
+      -webkit-transform: translate(55px,0); 
+      -o-transform: translate(55px,0); 
+      -moz-transform: translate(55px);
+  }
+
+.container{
+    margin-top: 150px;
+}
+  
+.dropbtn {
+    background-color:transparent;
+    color: white;
+    padding: 16px;
+    font-size: 18px;
+    border: none;
+    font-weight: 500;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin-right: 20px;
+  }
+  
+  .dropdown-content a:hover {background-color: transparent; color: rgb(255, 217, 0);}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+.logout{
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+  .dropdown:hover .dropbtn {background-color: transparent;}
+
+  .dropbtn:hover{
+    color: rgb(255, 217, 0);
+  }
+
+  

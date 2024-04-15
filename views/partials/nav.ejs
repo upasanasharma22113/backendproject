@@ -1,0 +1,79 @@
+<header class="header">
+  <a href="/" class="logo">BlogByte</a>
+
+  <nav class="navbar">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/allblogs">Blogs</a>
+      <% if (locals.user) { %>
+          <a href="/blog/add-new">Add Blog</a>
+          
+
+
+          <div class="dropdown">
+            <button class="dropbtn"><%= locals.user.email %> <i class="fas fa-chevron-down arrow_icon"></i></button>
+            <div class="dropdown-content">
+              <a href="/blog/myblog">My Blogs</a>
+              <a href="/user/logout" class="logout">Log out</a>
+            </div>
+          </div>
+
+      <% } else { %>
+          <a href="/user/signin">Login</a>
+          <a href="/user/signup">Sign Up</a>
+      <% } %>
+      
+
+        
+          <div class="search">
+            <div class="text_and-icon">
+              <form action="/blog/search" method="post" id="searchform">
+                <input type="search" class="search_text" id="search" name="search"
+                    placeholder="Search with title ..">
+                <i class="fas fa-search search_icon"></i>
+                <i class="fas fa-chevron-down arrow_icon"></i>
+              </form>
+
+              
+
+            </div>
+        </div>
+
+        
+
+        
+        
+      
+      
+        
+
+  </nav>
+  <div class="category">
+    <form action="/blog/filter" method="post">
+      <select name="category" id="category">
+        <option value="Select Category">Select Category</option>
+        <option value="Technology">Technology</option>
+        <option value="Health">Health</option>
+        <option value="Science">Science</option>
+        <option value="Travel">Travel</option>
+        <option value="Food">Food</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Sports">Sports</option>
+        <option value="Music">Music</option>
+        <option value="Movies">Movies</option>
+        <option value="Books">Books</option>
+      </select> 
+      <button type="submit">Filter</button>
+    </form>
+    </div>
+  
+
+</header>
+
+<% if (locals.error) { %>
+  <div class="container mt-4">
+    <div class="alert alert-danger" role="alert">
+      <%= locals.error %>
+    </div>
+  </div>
+<% } %>
